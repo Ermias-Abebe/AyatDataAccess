@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8f105bef07b4302855f79687accb73b" Name="Diagram1" ZoomLevel="96">
+        <EntityTypeShape EntityType="AyatModel.ActivityLog" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AyatModel.Company" Width="1.5" PointX="2.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AyatModel.Device" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AyatModel.UserName" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AyatModel.RoleIncrement" Width="1.5" PointX="3.75" PointY="18.75" IsExpanded="true" />
+        <AssociationConnector Association="AyatModel.FK_ActivityLog_Device" ManuallyRouted="false" />
+        <AssociationConnector Association="AyatModel.FK_ActivityLog_UserName" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="AyatModel.Employee" Width="1.5" PointX="3.75" PointY="22.125" />
+        <AssociationConnector Association="AyatModel.FK_Employee_Employee" />
+        <AssociationConnector Association="AyatModel.FK_UserName_Employee" />
+        <EntityTypeShape EntityType="AyatModel.Payment" Width="1.5" PointX="10.5" PointY="3.5" />
+        <EntityTypeShape EntityType="AyatModel.PaymentPlan" Width="1.5" PointX="8.25" PointY="7.125" />
+        <AssociationConnector Association="AyatModel.FK_Payment_PaymentPlan" />
+        <EntityTypeShape EntityType="AyatModel.Access" Width="1.5" PointX="3" PointY="11.375" />
+        <AssociationConnector Association="AyatModel.FK_access_UserName" />
+        <EntityTypeShape EntityType="AyatModel.CommissionPayment" Width="2.5" PointX="5.375" PointY="12" />
+        <EntityTypeShape EntityType="AyatModel.Sale" Width="1.5" PointX="6" PointY="0.75" />
+        <AssociationConnector Association="AyatModel.FK_Sales_Device" />
+        <AssociationConnector Association="AyatModel.FK_Payment_Sales" />
+        <AssociationConnector Association="AyatModel.FK_PaymentPlan_Sales" />
+        <AssociationConnector Association="AyatModel.FK_Sales_UserName" />
+        <EntityTypeShape EntityType="AyatModel.Commission" Width="1.5" PointX="10.5" PointY="11.125" />
+        <EntityTypeShape EntityType="AyatModel.Role" Width="1.5" PointX="1.5" PointY="21.375" />
+        <AssociationConnector Association="AyatModel.FK_Commission_PaymentPlan" />
+        <AssociationConnector Association="AyatModel.FK_Commission_Role" />
+        <AssociationConnector Association="AyatModel.FK_Commission_Sales" />
+        <AssociationConnector Association="AyatModel.FK_Employee_Role" />
+        <AssociationConnector Association="AyatModel.FK_Role_Role" />
+        <AssociationConnector Association="AyatModel.FK_RoleIncrements_Role" />
+        <EntityTypeShape EntityType="AyatModel.CommissionPaymentDetail" Width="1.5" PointX="12.75" PointY="6.875" />
+        <AssociationConnector Association="AyatModel.FK_CommissionPaymentDetail_Commission" />
+        <AssociationConnector Association="AyatModel.FK_CommissionPaymentDetail_CommissionPaymentDetail" />
+        <AssociationConnector Association="AyatModel.FK_CommissionPaymentDetail_Sales" />
+        <AssociationConnector Association="AyatModel.FK_CommissionPaymentDetail_Role" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
